@@ -1,0 +1,47 @@
+evidence_id: ev_2a30c207b1a49570cfcc7486ee58891f54bbf1570c6c3ff2fc980fe8a970ebac
+subject:
+  name: adb.exe
+  digest:
+    sha256: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  local_path: /home/z/my-project/rea/rev/adb.exe
+  format: unknown
+  architecture: null
+provider:
+  id: gnu.objdump
+  name: GNU objdump
+  version: null
+analysis_profile: null
+predicate_type: rea.reverse-engineering.command-observation
+operation: inspect_with_objdump
+parameters:
+  path: /home/z/my-project/rea/rev/adb.exe
+  operation: file_headers
+  follow_debug_links: false
+  provider_executable: objdump
+  command_arguments[2]: "-f",/home/z/my-project/rea/rev/adb.exe
+raw_result:
+  stdout: "\n/home/z/my-project/rea/rev/adb.exe:     file format pei-i386\narchitecture: i386, flags 0x0000012f:\nHAS_RELOC, EXEC_P, HAS_LINENO, HAS_DEBUG, HAS_LOCALS, D_PAGED\nstart address 0x00401490\n\n"
+  stderr: ""
+  exit_code: 0
+  signal: null
+  output_truncated: false
+  completion_status: complete
+  artifact_sha256_after: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  artifact_changed: false
+normalized_result:
+  stdout: "\n/home/z/my-project/rea/rev/adb.exe:     file format pei-i386\narchitecture: i386, flags 0x0000012f:\nHAS_RELOC, EXEC_P, HAS_LINENO, HAS_DEBUG, HAS_LOCALS, D_PAGED\nstart address 0x00401490\n\n"
+  stderr: ""
+  exit_code: 0
+  signal: null
+  output_truncated: false
+  completion_status: complete
+  artifact_sha256_after: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  artifact_changed: false
+confidence: observed
+authority: shipped-artifact
+environment: null
+limitations[3]: The executable version and supported formats are reported as unknown because no reliable version probe was performed.,A non-zero process exit is preserved as an observed command result.,"When both are available, pre-run and post-run digests detect artifact changes across the provider call but cannot prove the exact bytes consumed during the call."
+relationship_coverage: null
+locations[1]{kind,path}:
+  artifact-path,/home/z/my-project/rea/rev/adb.exe
+evidence_links: []

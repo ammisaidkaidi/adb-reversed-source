@@ -1,0 +1,15 @@
+// Function: _ZN3adb5proto37AdbServerStatus_UsbBackend_descriptorEv
+// Address: 0041dd30
+// Size: 1 bytes
+// Reconstructed by Ghidra 12.1.4 via REA skill workflow (PyGhidra)
+
+
+undefined8 _ZN3adb5proto37AdbServerStatus_UsbBackend_descriptorEv(void)
+
+{
+  _ZN6google8protobuf8internal17AssignDescriptorsEPKNS1_15DescriptorTableE
+            (descriptor_table_packages_2fmodules_2fadb_2fproto_2fadb_5fhost_2eproto);
+  return uRam0000000000a008b0;
+}
+
+

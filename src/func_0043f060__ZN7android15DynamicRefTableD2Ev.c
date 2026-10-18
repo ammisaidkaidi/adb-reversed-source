@@ -1,0 +1,355 @@
+// Function: _ZN7android15DynamicRefTableD2Ev
+// Address: 0043f060
+// Size: 1 bytes
+// Reconstructed by Ghidra 12.1.4 via REA skill workflow (PyGhidra)
+
+
+/* WARNING: Removing unreachable block (ram,0x007e2296) */
+
+long * _ZN7android15DynamicRefTableD2Ev
+                 (undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
+                 undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8,
+                 undefined8 *param_9,long *param_10)
+
+{
+  uint uVar1;
+  undefined1 auVar2 [16];
+  undefined1 auVar3 [16];
+  char cVar4;
+  int iVar5;
+  uint *puVar6;
+  undefined4 *puVar7;
+  undefined8 uVar8;
+  long lVar9;
+  int *piVar10;
+  long *plVar11;
+  undefined8 extraout_RDX;
+  long extraout_RDX_00;
+  uint uVar12;
+  undefined8 uVar13;
+  undefined4 uVar14;
+  undefined8 *puVar15;
+  long *plVar16;
+  undefined8 *in_R9;
+  undefined4 uVar17;
+  long *plVar18;
+  undefined8 *puVar19;
+  long in_FS_OFFSET;
+  undefined4 extraout_XMM0_Da;
+  undefined4 extraout_XMM0_Da_00;
+  undefined4 extraout_XMM0_Db;
+  undefined4 extraout_XMM0_Db_00;
+  undefined8 extraout_XMM1_Qa;
+  undefined8 extraout_XMM1_Qa_00;
+  undefined4 uStack_f68;
+  undefined4 uStack_f64;
+  undefined4 uStack_f60;
+  undefined4 uStack_f5c;
+  undefined5 uStack_f58;
+  undefined8 uStack_f53;
+  undefined1 auStack_b68 [24];
+  long *plStack_b50;
+  long *plStack_b48;
+  undefined8 *puStack_b40;
+  undefined4 uStack_b38;
+  undefined4 uStack_b34;
+  undefined8 uStack_b28;
+  undefined8 uStack_b18;
+  undefined8 uStack_b08;
+  undefined8 uStack_af8;
+  undefined8 uStack_ae8;
+  undefined8 uStack_ad8;
+  undefined8 uStack_ac8;
+  undefined8 uStack_ab8;
+  undefined1 *puStack_ab0;
+  undefined1 *puStack_aa8;
+  undefined8 uStack_a98;
+  undefined8 *puStack_a90;
+  undefined *puStack_a88;
+  undefined1 auStack_a80 [8];
+  undefined1 auStack_a78 [24];
+  long *plStack_a60;
+  undefined8 *puStack_a58;
+  undefined4 uStack_a50;
+  undefined4 uStack_a4c;
+  undefined8 uStack_a40;
+  undefined8 uStack_a30;
+  undefined8 uStack_a20;
+  undefined8 uStack_a10;
+  undefined8 uStack_a00;
+  undefined8 uStack_9f0;
+  undefined8 uStack_9e0;
+  long *plStack_9d0;
+  undefined4 uStack_9c4;
+  undefined8 uStack_9c0;
+  undefined4 uStack_9b8;
+  uint uStack_9b4;
+  undefined8 uStack_9b0;
+  undefined8 uStack_9a8;
+  undefined8 uStack_9a0;
+  undefined1 *puStack_998;
+  undefined8 uStack_990;
+  undefined1 *puStack_988;
+  undefined1 *puStack_980;
+  undefined1 auStack_970 [1024];
+  long lStack_570;
+  undefined *puStack_568;
+  ulong uStack_560;
+  long *plStack_558;
+  undefined8 uStack_550;
+  uint *puStack_548;
+  undefined *puStack_540;
+  undefined1 auStack_538 [8];
+  undefined1 auStack_530 [16];
+  long *plStack_520;
+  long *plStack_518;
+  undefined8 *puStack_510;
+  undefined8 uStack_488;
+  undefined4 uStack_480;
+  undefined4 uStack_47c;
+  undefined *puStack_478;
+  undefined8 uStack_470;
+  undefined8 uStack_468;
+  undefined1 *puStack_460;
+  undefined8 uStack_458;
+  undefined1 *puStack_450;
+  undefined1 *puStack_448;
+  undefined1 auStack_438 [1000];
+  undefined *puStack_50;
+  long *plStack_48;
+  long *plStack_40;
+  undefined *puStack_38;
+  undefined8 uStack_30;
+  
+  *param_9 = 0x99f858;
+  lVar9 = param_9[0x27];
+  if (lVar9 != 0) {
+    param_9[0x28] = lVar9;
+    param_10 = (long *)(param_9[0x29] - lVar9);
+    _ZdaPvSt11align_val_t();
+  }
+  param_9[0x22] = 0x99faa8;
+  plVar11 = param_9 + 0x22;
+  _ZN7android10VectorImpl13finish_vectorEv(plVar11);
+  *plVar11 = 0x9b50a0;
+  if (param_9[0x24] == 0) {
+    return (long *)0x0;
+  }
+  auVar2._8_8_ = 0;
+  auVar2._0_8_ = param_9[0x24];
+  auVar3._8_8_ = 0;
+  auVar3._0_8_ = param_9[0x26];
+  if (SUB168(auVar2 * auVar3,8) != 0) {
+    uStack_30 = func_0x008fcec0();
+    if (plVar11[4] == param_10[4]) {
+      if (plVar11 != param_10) {
+        if (plVar11[1] != 0) {
+          lVar9 = plVar11[1] + -0x18;
+          puStack_38 = &UNK_007d14d9;
+          iVar5 = _ZNK7android12SharedBuffer7releaseEj(lVar9,1);
+          if (iVar5 == 1) {
+            if ((*(byte *)(plVar11 + 3) & 2) == 0) {
+              puStack_38 = &UNK_007d14f5;
+              (**(code **)(*plVar11 + 0x18))(plVar11,plVar11[1],plVar11[2]);
+            }
+            puStack_38 = &UNK_007d14fd;
+            _ZN7android12SharedBuffer7deallocEPKS0_(lVar9);
+          }
+        }
+        if (param_10[2] == 0) {
+          plVar11[1] = 0;
+          plVar11[2] = 0;
+        }
+        else {
+          lVar9 = param_10[1];
+          plVar11[1] = lVar9;
+          plVar11[2] = param_10[2];
+          puStack_38 = &UNK_007d151d;
+          _ZNK7android12SharedBuffer7acquireEv(lVar9 + -0x18);
+        }
+      }
+      return plVar11;
+    }
+    plVar18 = (long *)&UNK_0016a768;
+    puStack_38 = &UNK_007d1559;
+    plVar16 = (long *)__android_log_assert
+                                (&UNK_0016a768,&UNK_0015a8e2,&UNK_00168cb3,plVar11,param_10);
+    if (plVar18[1] != 0) {
+      lVar9 = plVar18[1] + -0x18;
+      puStack_50 = &UNK_007d1584;
+      plStack_48 = plVar11;
+      plStack_40 = param_10;
+      puStack_38 = &stack0xfffffffffffffff0;
+      plVar16 = (long *)_ZNK7android12SharedBuffer7releaseEj(lVar9,1);
+      if ((int)plVar16 == 1) {
+        if ((*(byte *)(plVar18 + 3) & 2) == 0) {
+          puStack_50 = &UNK_007d15a1;
+          (**(code **)(*plVar18 + 0x18))(plVar18,plVar18[1],plVar18[2]);
+        }
+        plVar11 = (long *)free(lVar9);
+        return plVar11;
+      }
+    }
+    return plVar16;
+  }
+  plVar16 = (long *)(ulong)SUB164(auVar2 * auVar3,0);
+  uVar14 = 5;
+  puStack_38 = *(undefined **)(in_FS_OFFSET + 0x28);
+  puStack_448 = auStack_538;
+  uStack_458 = 0x3000000018;
+  puStack_450 = &stack0x00000008;
+  puStack_540 = &UNK_007e2314;
+  plStack_520 = plVar11;
+  plStack_518 = plVar16;
+  puStack_510 = in_R9;
+  puVar6 = (uint *)func_0x0099bce0();
+  uVar1 = *puVar6;
+  uVar12 = 0x15a8e2;
+  puStack_540 = &UNK_007e232a;
+  iVar5 = __android_log_is_loggable(5,&UNK_0015a8e2,2);
+  if (iVar5 == 0) {
+    plVar18 = (long *)0xffffffff;
+  }
+  else {
+    plVar16 = (long *)&UNK_0016557e;
+    plVar18 = (long *)0x1;
+    in_R9 = &uStack_458;
+    uVar12 = 0x400;
+    plVar11 = (long *)0x400;
+    puStack_540 = &UNK_007e2359;
+    func_0x0099c630(auStack_438,0x400,1);
+    uStack_488 = 0x30;
+    uStack_480 = 0;
+    uStack_47c = 5;
+    puStack_478 = &UNK_0015a8e2;
+    uStack_470 = 0;
+    uStack_468 = 0;
+    puStack_460 = auStack_438;
+    uVar14 = SUB84(&uStack_488,0);
+    puStack_540 = &UNK_007e23a0;
+    __android_log_write_log_message();
+  }
+  *puVar6 = uVar1;
+  if ((undefined *)*(long *)(in_FS_OFFSET + 0x28) == puStack_38) {
+    return plVar18;
+  }
+  puStack_540 = &UNK_007e23d4;
+  cVar4 = func_0x0099bd00();
+  uStack_550 = 5;
+  puStack_568 = &UNK_0015a8e2;
+  puVar19 = (undefined8 *)(ulong)uVar12;
+  if (cVar4 != '\0') {
+    uStack_a50 = extraout_XMM0_Da;
+    uStack_a4c = extraout_XMM0_Db;
+    uStack_a40 = extraout_XMM1_Qa;
+    uStack_a30 = param_3;
+    uStack_a20 = param_4;
+    uStack_a10 = param_5;
+    uStack_a00 = param_6;
+    uStack_9f0 = param_7;
+    uStack_9e0 = param_8;
+  }
+  lStack_570 = *(long *)(in_FS_OFFSET + 0x28);
+  puStack_980 = auStack_a80;
+  uStack_990 = 0x3000000020;
+  puStack_988 = auStack_530;
+  puStack_a88 = &UNK_007e2494;
+  plStack_a60 = plVar16;
+  puStack_a58 = in_R9;
+  plStack_9d0 = plVar11;
+  uStack_560 = (ulong)uVar1;
+  plStack_558 = plVar18;
+  puStack_548 = puVar6;
+  puStack_540 = &stack0xfffffffffffffff8;
+  puVar7 = (undefined4 *)func_0x0099bce0();
+  uVar17 = *puVar7;
+  puStack_a88 = &UNK_007e24aa;
+  uVar13 = extraout_RDX;
+  puVar15 = puVar19;
+  iVar5 = __android_log_is_loggable(puVar19,extraout_RDX,2);
+  if (iVar5 == 0) {
+    plVar18 = (long *)0xffffffff;
+  }
+  else {
+    plVar18 = (long *)0x1;
+    in_R9 = &uStack_990;
+    uVar13 = 0x400;
+    plVar11 = (long *)0x400;
+    puStack_a88 = &UNK_007e24eb;
+    plVar16 = plStack_9d0;
+    uStack_9c4 = uVar17;
+    func_0x0099c630(auStack_970,0x400,1);
+    uVar17 = uStack_9c4;
+    uStack_9c0 = 0x30;
+    uStack_9a8 = 0;
+    uStack_9a0 = 0;
+    puStack_998 = auStack_970;
+    puVar15 = &uStack_9c0;
+    puStack_a88 = &UNK_007e2536;
+    uStack_9b8 = uVar14;
+    uStack_9b4 = uVar12;
+    uStack_9b0 = extraout_RDX;
+    __android_log_write_log_message();
+  }
+  *puVar7 = uVar17;
+  if (*(long *)(in_FS_OFFSET + 0x28) == lStack_570) {
+    return plVar18;
+  }
+  puStack_a88 = &UNK_007e256a;
+  cVar4 = func_0x0099bd00();
+  if (cVar4 != '\0') {
+    uStack_b38 = extraout_XMM0_Da_00;
+    uStack_b34 = extraout_XMM0_Db_00;
+    uStack_b28 = extraout_XMM1_Qa_00;
+    uStack_b18 = param_3;
+    uStack_b08 = param_4;
+    uStack_af8 = param_5;
+    uStack_ae8 = param_6;
+    uStack_ad8 = param_7;
+    uStack_ac8 = param_8;
+  }
+  plStack_b50 = plVar11;
+  plStack_b48 = plVar16;
+  puStack_b40 = in_R9;
+  uStack_a98 = extraout_RDX;
+  puStack_a90 = puVar19;
+  if (extraout_RDX_00 == 0) {
+    if (puVar15 == (undefined8 *)0x0) {
+      uStack_f58 = 0x6e6f697472;
+      uStack_f53 = 0x64656c69616620;
+      uStack_f68 = 0x70736e55;
+      uStack_f64 = 0x66696365;
+      uStack_f60 = 0x20646569;
+      uStack_f5c = 0x65737361;
+      puStack_a88 = (undefined *)&puStack_540;
+    }
+    else {
+      puStack_a88 = (undefined *)&puStack_540;
+      func_0x0099c030(&uStack_f68,0x400,&UNK_00184329,puVar15);
+    }
+  }
+  else {
+    puStack_aa8 = auStack_b68;
+    uStack_ab8 = 0x3000000018;
+    puStack_ab0 = auStack_a78;
+    puStack_a88 = (undefined *)&puStack_540;
+    func_0x0099c630(&uStack_f68,0x400,1,0x400,extraout_RDX_00,&uStack_ab8);
+  }
+  do {
+    uVar8 = func_0x0099bcf0(&uStack_f68);
+    lVar9 = func_0x0099be60(2,&uStack_f68,uVar8);
+    if (lVar9 != -1) break;
+    piVar10 = (int *)func_0x0099bce0();
+  } while (*piVar10 == 4);
+  do {
+    lVar9 = func_0x0099be60(2,&UNK_0017a0d6,1);
+    if (lVar9 != -1) break;
+    piVar10 = (int *)func_0x0099bce0();
+  } while (*piVar10 == 4);
+  __android_log_write(7,uVar13,&uStack_f68);
+  (*pcRam00000000009ff948)(&uStack_f68);
+  func_0x0099c600();
+  return (long *)0x1;
+}
+
+

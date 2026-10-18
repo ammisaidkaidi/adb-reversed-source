@@ -1,0 +1,47 @@
+evidence_id: ev_029856eb5769bfc619f1a486b34e07d4a020a00f1223e9b80cccc522c23a868e
+subject:
+  name: adb.exe
+  digest:
+    sha256: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  local_path: /home/z/my-project/rea/rev/adb.exe
+  format: unknown
+  architecture: null
+provider:
+  id: gnu.objdump
+  name: GNU objdump
+  version: null
+analysis_profile: null
+predicate_type: rea.reverse-engineering.command-observation
+operation: inspect_with_objdump
+parameters:
+  path: /home/z/my-project/rea/rev/adb.exe
+  operation: section_headers
+  follow_debug_links: false
+  provider_executable: objdump
+  command_arguments[2]: "-h",/home/z/my-project/rea/rev/adb.exe
+raw_result:
+  stdout: "\n/home/z/my-project/rea/rev/adb.exe:     file format pei-i386\n\nSections:\nIdx Name          Size      VMA       LMA       File off  Algn\n  0 .text         00625d00  00401000  00401000  00000400  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, CODE\n  1 .rdata        0014e29f  00a27000  00a27000  00626200  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  2 .buildid      000000db  00b76000  00b76000  00774600  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  3 .data         00039800  00b77000  00b77000  00774800  2**2\n                  CONTENTS, ALLOC, LOAD, DATA\n  4 .eh_fram      00009c34  00bcf000  00bcf000  007ae000  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  5 .gcc_exc      0000254c  00bd9000  00bd9000  007b7e00  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  6 .tls          00000068  00bdc000  00bdc000  007ba400  2**2\n                  CONTENTS, ALLOC, LOAD, DATA\n  7 .reloc        00026f68  00bdd000  00bdd000  007ba600  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n"
+  stderr: ""
+  exit_code: 0
+  signal: null
+  output_truncated: false
+  completion_status: complete
+  artifact_sha256_after: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  artifact_changed: false
+normalized_result:
+  stdout: "\n/home/z/my-project/rea/rev/adb.exe:     file format pei-i386\n\nSections:\nIdx Name          Size      VMA       LMA       File off  Algn\n  0 .text         00625d00  00401000  00401000  00000400  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, CODE\n  1 .rdata        0014e29f  00a27000  00a27000  00626200  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  2 .buildid      000000db  00b76000  00b76000  00774600  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  3 .data         00039800  00b77000  00b77000  00774800  2**2\n                  CONTENTS, ALLOC, LOAD, DATA\n  4 .eh_fram      00009c34  00bcf000  00bcf000  007ae000  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  5 .gcc_exc      0000254c  00bd9000  00bd9000  007b7e00  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  6 .tls          00000068  00bdc000  00bdc000  007ba400  2**2\n                  CONTENTS, ALLOC, LOAD, DATA\n  7 .reloc        00026f68  00bdd000  00bdd000  007ba600  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n"
+  stderr: ""
+  exit_code: 0
+  signal: null
+  output_truncated: false
+  completion_status: complete
+  artifact_sha256_after: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  artifact_changed: false
+confidence: observed
+authority: shipped-artifact
+environment: null
+limitations[3]: The executable version and supported formats are reported as unknown because no reliable version probe was performed.,A non-zero process exit is preserved as an observed command result.,"When both are available, pre-run and post-run digests detect artifact changes across the provider call but cannot prove the exact bytes consumed during the call."
+relationship_coverage: null
+locations[1]{kind,path}:
+  artifact-path,/home/z/my-project/rea/rev/adb.exe
+evidence_links: []

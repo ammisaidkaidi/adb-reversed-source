@@ -1,0 +1,49 @@
+// Function: LZ4F_freeDecompressionContext
+// Address: 004a6980
+// Size: 1 bytes
+// Reconstructed by Ghidra 12.1.4 via REA skill workflow (PyGhidra)
+
+
+undefined4 LZ4F_freeDecompressionContext(long param_1)
+
+{
+  code *pcVar1;
+  undefined8 uVar2;
+  undefined4 uVar3;
+  
+  if (param_1 == 0) {
+    uVar3 = 0;
+  }
+  else {
+    uVar3 = *(undefined4 *)(param_1 + 0x44);
+    pcVar1 = *(code **)(param_1 + 0x10);
+    uVar2 = *(undefined8 *)(param_1 + 0x18);
+    if (*(long *)(param_1 + 0x60) != 0) {
+      if (pcVar1 == (code *)0x0) {
+        func_0x0099c1f0(*(long *)(param_1 + 0x60));
+      }
+      else {
+        (*pcVar1)(uVar2);
+      }
+      pcVar1 = *(code **)(param_1 + 0x10);
+      uVar2 = *(undefined8 *)(param_1 + 0x18);
+    }
+    if (*(long *)(param_1 + 0x78) != 0) {
+      if (pcVar1 == (code *)0x0) {
+        func_0x0099c1f0(*(long *)(param_1 + 0x78));
+      }
+      else {
+        (*pcVar1)(uVar2);
+      }
+    }
+    if (*(code **)(param_1 + 0x10) == (code *)0x0) {
+      func_0x0099c1f0(param_1);
+    }
+    else {
+      (**(code **)(param_1 + 0x10))(*(undefined8 *)(param_1 + 0x18),param_1);
+    }
+  }
+  return uVar3;
+}
+
+

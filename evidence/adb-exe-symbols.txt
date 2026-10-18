@@ -1,0 +1,47 @@
+evidence_id: ev_a7ee49988e02b7eee56468efebf4ef98e65843ec0af5b0c65e51bad60f4beb10
+subject:
+  name: adb.exe
+  digest:
+    sha256: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  local_path: /home/z/my-project/rea/rev/adb.exe
+  format: unknown
+  architecture: null
+provider:
+  id: gnu.objdump
+  name: GNU objdump
+  version: null
+analysis_profile: null
+predicate_type: rea.reverse-engineering.command-observation
+operation: inspect_with_objdump
+parameters:
+  path: /home/z/my-project/rea/rev/adb.exe
+  operation: symbols
+  follow_debug_links: false
+  provider_executable: objdump
+  command_arguments[2]: "-t",/home/z/my-project/rea/rev/adb.exe
+raw_result:
+  stdout: "\n/home/z/my-project/rea/rev/adb.exe:     file format pei-i386\n\nSYMBOL TABLE:\nno symbols\n\n\n"
+  stderr: ""
+  exit_code: 0
+  signal: null
+  output_truncated: false
+  completion_status: complete
+  artifact_sha256_after: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  artifact_changed: false
+normalized_result:
+  stdout: "\n/home/z/my-project/rea/rev/adb.exe:     file format pei-i386\n\nSYMBOL TABLE:\nno symbols\n\n\n"
+  stderr: ""
+  exit_code: 0
+  signal: null
+  output_truncated: false
+  completion_status: complete
+  artifact_sha256_after: b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f
+  artifact_changed: false
+confidence: observed
+authority: shipped-artifact
+environment: null
+limitations[3]: The executable version and supported formats are reported as unknown because no reliable version probe was performed.,A non-zero process exit is preserved as an observed command result.,"When both are available, pre-run and post-run digests detect artifact changes across the provider call but cannot prove the exact bytes consumed during the call."
+relationship_coverage: null
+locations[1]{kind,path}:
+  artifact-path,/home/z/my-project/rea/rev/adb.exe
+evidence_links: []

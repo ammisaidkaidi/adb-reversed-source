@@ -1,0 +1,22 @@
+// Function: _ZN4absl12lts_2026052621ScopedStderrThresholdD1Ev
+// Address: 004bf8b0
+// Size: 1 bytes
+// Reconstructed by Ghidra 12.1.4 via REA skill workflow (PyGhidra)
+
+
+void _ZN4absl12lts_2026052621ScopedStderrThresholdD1Ev(undefined4 *param_1)
+
+{
+  uRam00000000009fb7a0 = *param_1;
+  if ((pcRam00000000009fb7a8 !=
+       _ZN4absl12lts_2026052613base_internal10AtomicHookIPFvvEE13DummyFunctionEv) &&
+     (pcRam00000000009fb7a8 != (code *)0x0)) {
+                    /* WARNING: Could not recover jumptable at 0x004bf8d2. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (*pcRam00000000009fb7a8)();
+    return;
+  }
+  return;
+}
+
+
